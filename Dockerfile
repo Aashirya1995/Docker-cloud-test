@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
 RUN apt-get update
-RUN apt-get -y install python 3.5.2
+RUN apt-get -y install python3
 COPY . /src
 WORKDIR /src
