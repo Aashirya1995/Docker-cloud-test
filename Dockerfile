@@ -1,7 +1,13 @@
 FROM ubuntu:xenial
+
+RUN apt-get update -y
+RUN apt-get install -y python3 python3-pip python3-dev build-essential
+
+RUN pip3 install Flask
+
 COPY . /src
 WORKDIR /src
-RUN apt-get update
-RUN apt-get -y install python3
-RUN apt-get -y install python3-pip
-RUN pip3 install flas
+
+EXPOSE 8080
+
+RUN python3 unh698_test.py
