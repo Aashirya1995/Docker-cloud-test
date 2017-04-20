@@ -6,7 +6,7 @@ def hello_world():
     return render_template('main.html')
 
 @app.route('/new_page')
-def new_page_test():
+def new_page():
     return render_template('new_page.html')
 
 if __name__ == '__main__':
