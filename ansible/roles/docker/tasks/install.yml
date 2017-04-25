@@ -44,6 +44,6 @@
 # http://docs.ansible.com/ansible/apt_module.html
 - name: Install the latest version of docker community edition
   apt:
-    pkg: docker-ce
+    pkg: docker-ce:latest
     update_cache: yes
     cache_valid_time: 1800
