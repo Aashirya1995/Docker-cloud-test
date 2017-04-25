@@ -19,8 +19,8 @@
 - name: Setup docker repository key
   apt_key:
     id: 0EBFCD88
-    url: "https://ftp-master.debian.org/keys/archive-key-6.0.asc"
-    state: absent
+    url: https://download.docker.com/linux/ubuntu/gpg #"https://ftp-master.debian.org/keys/archive-key-6.0.asc"
+    state: present
   notify: apt-get update
 
 # This command runs on the server to determine what version of ubuntu is running
@@ -44,6 +44,6 @@
 # http://docs.ansible.com/ansible/apt_module.html
 - name: Install the latest version of docker community edition
   apt:
-    pkg: docker ce
+    pkg: docker-ce
     update_cache: yes
     cache_valid_time: 1800
