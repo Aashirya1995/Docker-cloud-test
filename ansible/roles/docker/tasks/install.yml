@@ -9,9 +9,9 @@
     update_cache: yes
     cache_valid_time: 1800
   with_items:
-    - apt-transport-https \
-    - ca-certificates \ 
-    - curl \
+    - apt-transport-https 
+    - ca-certificates 
+    - curl 
     - software-properties-common
 
 # Add docker's GPG key
