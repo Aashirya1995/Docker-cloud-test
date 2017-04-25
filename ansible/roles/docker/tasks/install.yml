@@ -20,7 +20,7 @@
   apt_key:
     id: 0EBFCD88
     url: "https://ftp-master.debian.org/keys/archive-key-6.0.asc"
-    state: present
+    state: absent
   notify: apt-get update
 
 # This command runs on the server to determine what version of ubuntu is running
